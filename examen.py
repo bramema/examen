@@ -1,5 +1,5 @@
 import json
-import os
+
 def ranking_productos_menos_vendidos(fecha_inicio, fecha_fin, facturas):
     productos = {}
 
