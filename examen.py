@@ -21,7 +21,7 @@ def cargar_csv(nombre_archivo):
 
 def facturar_con_descuento(nombre_archivo):
     try:
-        with open(nombre_archivo, "w") as archivo:
+        with open(ruta/nombre_archivo, "w") as archivo:
             json.dump(factura, archivo, indent=4)
             print("Factura guardada en:", nombre_archivo)
     except:
