@@ -2,7 +2,7 @@ import csv
 import json
 from pathlib import Path
 
-ruta = Path(_file_).parent
+ruta = Path(__file__).parent
 # ================= FUNCIONES =================
 
 def guardar_csv(nombre_archivo, datos, campos):
