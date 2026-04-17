@@ -1,16 +1,19 @@
 import csv
 import json
+from pathlib import Path
+
+ruta = Path(_file_).parent
 # ================= FUNCIONES =================
 
 def guardar_csv(nombre_archivo, datos, campos):
-    with open(nombre_archivo, mode="a", newline="") as archivo:
+    with open(ruta/nombre_archivo, mode="a", newline="") as archivo:
         writer = csv.DictWriter(archivo, fieldnames=campos)
         writer.writeheader()
         writer.writerows(datos)
 
 def cargar_csv(nombre_archivo):
     try:
-        with open(nombre_archivo, mode="r") as archivo:
+        with open(ruta/nombre_archivo, mode="r") as archivo:
             reader = csv.DictReader(archivo)
             return list(reader)
     except FileNotFoundError:
